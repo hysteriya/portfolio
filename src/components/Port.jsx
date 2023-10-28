@@ -9,17 +9,20 @@ const Port = () => {
         {
             id:1,
             src: arrayDestruct,
-            name: "Web Scrapper"
+            name: "Web Scrapper",
+            href: "https://github.com/hysteriya/webdev-ref-and-scrapper"
         },
         {
             id:2,
             src: reactParallax,
-            name: "Tic Tac Toe"
+            name: "Tic Tac Toe",
+            href: "https://github.com/hysteriya/tic-tac-toe"
         },
         {
             id:3,
             src: navbar,
-            name: "Movie Application"
+            name: "Movie Application",
+            href: "https://github.com/hysteriya/movieapplication"
         },
 
     ]
@@ -35,13 +38,12 @@ const Port = () => {
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
             {
-                projects.map(({id, src, name})=>(
+                projects.map(({id, src, name, href})=>(
                     <div key={id}className="shadow-md shadow-gray-600 rounded-lg">
                     <img src={src} alt='' className="rounded-md duration-200 hover:scale-105"/>
                     <div className="flex items-center justify-center">
-                        <button 
-                        onclick="window.open('www.github.com')"
-                        className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">{name}</button>
+                        <a href={href} target='_blank' rel="noreferrer"
+                        className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">{name}</a>
                     </div>
                 </div>
                 ))
